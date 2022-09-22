@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<script>
+var ch;
+function checkVowel()
+{
+  ch = document.getElementById("char").value;
+  if(ch)
+  {
+    temp = document.getElementById("resPara");
+    temp.style.display = "block";
+    if((ch>='a' && ch<='z') || (ch>='A' && ch<='Z'))
+    {
+      if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u' || ch=='y' || ch=='å' || ch=='ä' || ch=='ö') 
+        document.getElementById("res").innerHTML = "en vokal";
+      else if(ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U' || ch=='Y' || ch=='Å' || ch=='Ä' || ch=='Ö')
+        document.getElementById("res").innerHTML = "en vokal";
+      else
+        document.getElementById("res").innerHTML = "en konsonant";
+    }
+    else
+      document.getElementById("res").innerHTML = "inte en Vokal eller konsonant";
+  }
+}
+</script>
+</head>
+<body>
+
+<p>Skriv en bokstav: <input id="char"><button onclick="checkVowel()">Check</button></p>
+<p id="resPara" style="display:none;">det är <span id="res"></span></p>
+
+</body>
+</html>
