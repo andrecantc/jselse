@@ -1,18 +1,27 @@
 var prompt = require('prompt-sync')();
 //input från human
 var number = prompt ("Skriv ett nummer:");
-console.log ("du skrev:" + number )
-// kolla om nummer är mer än 0
+console.log ("du skrev:" + number)
+if  (number == 90) {
+  console.log("90%");
+}
+
 if (number == 80) {
     console.log("du fick betyg B");
 }
 
-// om nummret är 0
-else if (number == 0) {
-  console.log("Nummret är 0");
+if (number == 70) {
+  console.log("du fick betyg C ");
 }
 
-// om nummer är mindre än 0
-if  (number == 90) {
-     console.log("A");
+if (number == 60 ) {
+  console.log("du fick betyg D");
+}
+
+if (number == 40) {
+  console.log("du fick betyg E");
+}
+
+if  (number == 39) {
+  console.log("du fick betyg F");
 }
